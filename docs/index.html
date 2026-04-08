@@ -4,13 +4,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Fake News Detection – FDHN</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <!-- NAV -->
   <nav id="navbar">
-    <div class="nav-brand">🔍 FDHN</div>
+    <div class="nav-brand">
+      <span class="brand-icon">⬡</span> FDHN
+    </div>
     <ul class="nav-links">
       <li><a href="#overview">Overview</a></li>
       <li><a href="#methodology">Methodology</a></li>
@@ -23,14 +28,23 @@
   </nav>
 
   <!-- HERO -->
-  <header class="hero">
+  <header class="hero" id="hero">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-glow hero-glow-1"></div>
+    <div class="hero-glow hero-glow-2"></div>
     <div class="hero-content">
-      <span class="badge">Thesis Research · DBS Semester 2</span>
-      <h1>Fake News Detection</h1>
+      <span class="badge">
+        <span class="badge-dot"></span>
+        Thesis Research · DBS Semester 2
+      </span>
+      <h1>Fake News<br/><span class="h1-gradient">Detection</span></h1>
       <p class="subtitle">using <span class="highlight">Fuzzy Deep Hybrid Network</span> (FDHN)</p>
       <p class="hero-desc">A systematic comparison of fuzzy membership functions and hybrid deep learning strategies for detecting deceptive political statements.</p>
       <div class="hero-btns">
-        <a href="#models" class="btn btn-primary">Explore Models</a>
+        <a href="#models" class="btn btn-primary">
+          <span>Explore Models</span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
         <a href="#methodology" class="btn btn-outline">View Methodology</a>
       </div>
     </div>
@@ -48,34 +62,48 @@
 
   <!-- STATS BAR -->
   <section class="stats-bar">
-    <div class="stat"><span class="stat-num" data-target="23000">0</span><span>+</span><p>Statements</p></div>
-    <div class="stat"><span class="stat-num" data-target="8">0</span><p>Model Variants</p></div>
-    <div class="stat"><span class="stat-num" data-target="5">0</span><p>Fuzzy Functions</p></div>
-    <div class="stat"><span class="stat-num" data-target="6">0</span><p>CRISP-DM Phases</p></div>
+    <div class="stat">
+      <span class="stat-num" data-target="23000">0</span><span class="stat-plus">+</span>
+      <p>Statements</p>
+    </div>
+    <div class="stat">
+      <span class="stat-num" data-target="8">0</span>
+      <p>Model Variants</p>
+    </div>
+    <div class="stat">
+      <span class="stat-num" data-target="5">0</span>
+      <p>Fuzzy Functions</p>
+    </div>
+    <div class="stat">
+      <span class="stat-num" data-target="6">0</span>
+      <p>CRISP-DM Phases</p>
+    </div>
   </section>
 
   <!-- OVERVIEW -->
   <section id="overview" class="section">
     <div class="container">
-      <h2 class="section-title">Project Overview</h2>
+      <div class="section-label">Project Overview</div>
+      <h2 class="section-title">What is FDHN?</h2>
+      <p class="section-sub">Combining fuzzy logic with deep learning to tackle uncertainty in political fact-checking.</p>
       <div class="overview-grid">
-        <div class="card">
-          <div class="card-icon">🎯</div>
+        <div class="glass-card">
+          <div class="card-icon-wrap card-icon-blue">🎯</div>
           <h3>Research Question</h3>
           <p>Which fuzzy membership functions and hybrid strategies yield the most accurate fake-news detection?</p>
         </div>
-        <div class="card">
-          <div class="card-icon">🧠</div>
+        <div class="glass-card">
+          <div class="card-icon-wrap card-icon-purple">🧠</div>
           <h3>Approach</h3>
           <p>Combines fuzzy logic with deep learning (BERT) to handle uncertainty inherent in political fact-checking.</p>
         </div>
-        <div class="card">
-          <div class="card-icon">📊</div>
+        <div class="glass-card">
+          <div class="card-icon-wrap card-icon-cyan">📊</div>
           <h3>Success Criteria</h3>
           <p>Improved Accuracy, Macro-F1, and Micro-F1 scores with robustness against ambiguous statements.</p>
         </div>
-        <div class="card">
-          <div class="card-icon">🗂️</div>
+        <div class="glass-card">
+          <div class="card-icon-wrap card-icon-pink">🗂️</div>
           <h3>Dataset</h3>
           <p>LIAR2 dataset — 23,000+ professionally fact-checked political statements with 6-point truth ratings.</p>
         </div>
@@ -86,47 +114,48 @@
   <!-- METHODOLOGY -->
   <section id="methodology" class="section section-alt">
     <div class="container">
+      <div class="section-label">Framework</div>
       <h2 class="section-title">CRISP-DM Methodology</h2>
       <p class="section-sub">Six structured phases guiding the research from business understanding to deployment.</p>
       <div class="timeline">
         <div class="timeline-item" data-phase="1">
           <div class="tl-dot">1</div>
-          <div class="tl-content">
+          <div class="tl-content glass-card">
             <h3>Business Understanding</h3>
             <p>Define research objectives, success criteria, and scope of the fake-news detection problem.</p>
           </div>
         </div>
         <div class="timeline-item" data-phase="2">
           <div class="tl-dot">2</div>
-          <div class="tl-content">
+          <div class="tl-content glass-card">
             <h3>Data Understanding</h3>
             <p>Explore LIAR2 dataset — speaker history, class distribution, missing justifications, and noisy context.</p>
           </div>
         </div>
         <div class="timeline-item" data-phase="3">
           <div class="tl-dot">3</div>
-          <div class="tl-content">
+          <div class="tl-content glass-card">
             <h3>Data Preparation</h3>
             <p>Text cleaning, tokenization, date standardization, fuzzy input engineering, and BERT embedding integration.</p>
           </div>
         </div>
         <div class="timeline-item" data-phase="4">
           <div class="tl-dot">4</div>
-          <div class="tl-content">
+          <div class="tl-content glass-card">
             <h3>Modeling</h3>
             <p>Train 8 FDHN variants with different fuzzy membership functions and hybrid strategies.</p>
           </div>
         </div>
         <div class="timeline-item" data-phase="5">
           <div class="tl-dot">5</div>
-          <div class="tl-content">
+          <div class="tl-content glass-card">
             <h3>Evaluation</h3>
             <p>Accuracy, Macro/Micro-F1, confusion matrices, ablation studies, and statistical significance tests.</p>
           </div>
         </div>
         <div class="timeline-item" data-phase="6">
           <div class="tl-dot">6</div>
-          <div class="tl-content">
+          <div class="tl-content glass-card">
             <h3>Deployment</h3>
             <p>Package the best-performing FDHN variant as a production-ready fact-checking tool.</p>
           </div>
@@ -138,36 +167,41 @@
   <!-- DATASET -->
   <section id="dataset" class="section">
     <div class="container">
+      <div class="section-label">Data</div>
       <h2 class="section-title">Dataset — LIAR2</h2>
       <div class="dataset-grid">
-        <div class="dataset-info">
+        <div class="dataset-info glass-card">
           <h3>Features</h3>
           <ul class="feature-list">
-            <li>📝 Statement text</li>
-            <li>👤 Speaker information &amp; history</li>
-            <li>📅 Publication date</li>
-            <li>🏷️ Subject categories</li>
-            <li>🌐 Context information</li>
-            <li>⭐ Truth ratings (6-point scale)</li>
-            <li>📈 Historical fact-checking counts</li>
-            <li>📄 Detailed justifications</li>
+            <li><span class="feat-icon">📝</span> Statement text</li>
+            <li><span class="feat-icon">👤</span> Speaker information &amp; history</li>
+            <li><span class="feat-icon">📅</span> Publication date</li>
+            <li><span class="feat-icon">🏷️</span> Subject categories</li>
+            <li><span class="feat-icon">🌐</span> Context information</li>
+            <li><span class="feat-icon">⭐</span> Truth ratings (6-point scale)</li>
+            <li><span class="feat-icon">📈</span> Historical fact-checking counts</li>
+            <li><span class="feat-icon">📄</span> Detailed justifications</li>
           </ul>
         </div>
         <div class="dataset-charts">
-          <h3>Top Subjects</h3>
-          <div class="bar-chart">
-            <div class="bar-row"><span>Facebook Fact-checks</span><div class="bar-track"><div class="bar-fill" style="--w:90%">90%</div></div></div>
-            <div class="bar-row"><span>Health Care</span><div class="bar-track"><div class="bar-fill" style="--w:75%">75%</div></div></div>
-            <div class="bar-row"><span>Elections</span><div class="bar-track"><div class="bar-fill" style="--w:68%">68%</div></div></div>
-            <div class="bar-row"><span>Taxes</span><div class="bar-track"><div class="bar-fill" style="--w:55%">55%</div></div></div>
-            <div class="bar-row"><span>Education</span><div class="bar-track"><div class="bar-fill" style="--w:42%">42%</div></div></div>
+          <div class="glass-card" style="margin-bottom:1.2rem">
+            <h3>Top Subjects</h3>
+            <div class="bar-chart">
+              <div class="bar-row"><span>Facebook Fact-checks</span><div class="bar-track"><div class="bar-fill" style="--w:90%">760</div></div></div>
+              <div class="bar-row"><span>Health Care</span><div class="bar-track"><div class="bar-fill" style="--w:62%">472</div></div></div>
+              <div class="bar-row"><span>Elections</span><div class="bar-track"><div class="bar-fill" style="--w:51%">385</div></div></div>
+              <div class="bar-row"><span>Taxes</span><div class="bar-track"><div class="bar-fill" style="--w:49%">372</div></div></div>
+              <div class="bar-row"><span>Education</span><div class="bar-track"><div class="bar-fill" style="--w:44%">333</div></div></div>
+            </div>
           </div>
-          <h3 style="margin-top:1.5rem">Top Speakers</h3>
-          <div class="bar-chart">
-            <div class="bar-row"><span>Facebook Posts</span><div class="bar-track"><div class="bar-fill bar-fill-2" style="--w:85%">85%</div></div></div>
-            <div class="bar-row"><span>Viral Images</span><div class="bar-track"><div class="bar-fill bar-fill-2" style="--w:70%">70%</div></div></div>
-            <div class="bar-row"><span>Donald Trump</span><div class="bar-track"><div class="bar-fill bar-fill-2" style="--w:65%">65%</div></div></div>
-            <div class="bar-row"><span>Bloggers</span><div class="bar-track"><div class="bar-fill bar-fill-2" style="--w:50%">50%</div></div></div>
+          <div class="glass-card">
+            <h3>Top Speakers</h3>
+            <div class="bar-chart">
+              <div class="bar-row"><span>Facebook Posts</span><div class="bar-track"><div class="bar-fill bar-fill-2" style="--w:100%">1879</div></div></div>
+              <div class="bar-row"><span>Viral Images</span><div class="bar-track"><div class="bar-fill bar-fill-2" style="--w:48%">900</div></div></div>
+              <div class="bar-row"><span>Donald Trump</span><div class="bar-track"><div class="bar-fill bar-fill-2" style="--w:42%">780</div></div></div>
+              <div class="bar-row"><span>Bloggers</span><div class="bar-track"><div class="bar-fill bar-fill-2" style="--w:31%">580</div></div></div>
+            </div>
           </div>
         </div>
       </div>
@@ -177,6 +211,7 @@
   <!-- MODELS -->
   <section id="models" class="section section-alt">
     <div class="container">
+      <div class="section-label">Architecture</div>
       <h2 class="section-title">Model Variants</h2>
       <p class="section-sub">Click a card to learn more about each variant.</p>
 
@@ -239,22 +274,25 @@
         </div>
       </div>
 
-      <h3 class="sub-heading" style="margin-top:2.5rem">Hybrid Approaches</h3>
+      <h3 class="sub-heading" style="margin-top:3rem">Hybrid Approaches</h3>
       <div class="hybrid-grid">
-        <div class="hybrid-card">
+        <div class="glass-card hybrid-card">
+          <div class="hybrid-badge hybrid-badge-purple">BERT</div>
           <h4>FDHN + BERT</h4>
           <p>Integrates pre-trained BERT language model with fuzzy deep hybrid network for rich contextual embeddings.</p>
-          <div class="arch-pills"><span>FDHN</span><span>+</span><span>BERT</span></div>
+          <div class="arch-pills"><span>FDHN</span><span class="pill-sep">+</span><span>BERT</span></div>
         </div>
-        <div class="hybrid-card">
+        <div class="glass-card hybrid-card">
+          <div class="hybrid-badge hybrid-badge-cyan">ANN</div>
           <h4>ANN + BERT</h4>
           <p>Traditional artificial neural network combined with BERT embeddings as a strong baseline comparison.</p>
-          <div class="arch-pills"><span>ANN</span><span>+</span><span>BERT</span></div>
+          <div class="arch-pills"><span>ANN</span><span class="pill-sep">+</span><span>BERT</span></div>
         </div>
-        <div class="hybrid-card">
+        <div class="glass-card hybrid-card">
+          <div class="hybrid-badge hybrid-badge-pink">FNN</div>
           <h4>FNN Layer</h4>
           <p>Pure fuzzy neural network implementation to isolate the contribution of fuzzy logic components.</p>
-          <div class="arch-pills"><span>FNN</span><span>+</span><span>Fuzzy Rules</span></div>
+          <div class="arch-pills"><span>FNN</span><span class="pill-sep">+</span><span>Fuzzy Rules</span></div>
         </div>
       </div>
     </div>
@@ -263,42 +301,43 @@
   <!-- RESULTS -->
   <section id="results" class="section">
     <div class="container">
-      <h2 class="section-title">Evaluation &amp; Results</h2>
+      <div class="section-label">Evaluation</div>
+      <h2 class="section-title">Results &amp; Metrics</h2>
       <p class="section-sub">Comprehensive metrics across all model variants.</p>
       <div class="metrics-grid">
-        <div class="metric-card">
+        <div class="glass-card metric-card">
           <div class="metric-icon">🎯</div>
           <h3>Accuracy</h3>
           <p>Overall classification accuracy across all 6 truth-rating classes.</p>
         </div>
-        <div class="metric-card">
+        <div class="glass-card metric-card">
           <div class="metric-icon">📐</div>
           <h3>Macro-F1</h3>
           <p>Unweighted mean F1 across classes — treats all classes equally regardless of size.</p>
         </div>
-        <div class="metric-card">
+        <div class="glass-card metric-card">
           <div class="metric-icon">📏</div>
           <h3>Micro-F1</h3>
           <p>Aggregate F1 weighted by class frequency — reflects overall system performance.</p>
         </div>
-        <div class="metric-card">
+        <div class="glass-card metric-card">
           <div class="metric-icon">🔬</div>
           <h3>Ablation Study</h3>
           <p>Isolates the contribution of each component — fuzzy layer, BERT, and hybrid strategy.</p>
         </div>
-        <div class="metric-card">
+        <div class="glass-card metric-card">
           <div class="metric-icon">📉</div>
           <h3>Confusion Matrix</h3>
           <p>Per-class error analysis to identify systematic misclassification patterns.</p>
         </div>
-        <div class="metric-card">
+        <div class="glass-card metric-card">
           <div class="metric-icon">📊</div>
           <h3>Statistical Tests</h3>
           <p>Significance testing to confirm that performance differences are not due to chance.</p>
         </div>
       </div>
-      <div class="results-note">
-        <span>📓</span>
+      <div class="results-note glass-card">
+        <span class="results-note-icon">📓</span>
         <p>Full results, charts, and per-model breakdowns are available in <strong>FDHN_Compare_Thesis.ipynb</strong></p>
       </div>
     </div>
@@ -307,7 +346,8 @@
   <!-- USAGE -->
   <section id="usage" class="section section-alt">
     <div class="container">
-      <h2 class="section-title">Quick Start</h2>
+      <div class="section-label">Quick Start</div>
+      <h2 class="section-title">Get Started</h2>
       <div class="tabs">
         <button class="tab-btn active" onclick="switchTab(this,'install')">Installation</button>
         <button class="tab-btn" onclick="switchTab(this,'predict')">Prediction</button>
@@ -351,13 +391,18 @@ truth_score = interpret_prediction(prediction)</code></pre>
 
   <!-- FOOTER -->
   <footer class="footer">
+    <div class="footer-glow"></div>
     <div class="footer-inner">
-      <p>🔍 <strong>Fake News Detection using FDHN</strong></p>
+      <div class="footer-brand">⬡ FDHN</div>
+      <p><strong>Fake News Detection using Fuzzy Deep Hybrid Network</strong></p>
       <p>Thesis Research · DBS Study · Semester 2 · 2024</p>
       <p class="footer-links">
-        <a href="#overview">Overview</a> ·
-        <a href="#methodology">Methodology</a> ·
-        <a href="#models">Models</a> ·
+        <a href="#overview">Overview</a>
+        <span class="footer-sep">·</span>
+        <a href="#methodology">Methodology</a>
+        <span class="footer-sep">·</span>
+        <a href="#models">Models</a>
+        <span class="footer-sep">·</span>
         <a href="#results">Results</a>
       </p>
       <p class="footer-license">MIT License · For questions contact <a href="mailto:your-email@example.com">your-email@example.com</a></p>
